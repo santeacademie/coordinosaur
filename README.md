@@ -11,7 +11,13 @@ Coordinosaur is a simple task coordinator able to:
 
 **It doesn't execute jobs but allows a client to execute a job according to pre-defined rules.**
 
-Rules:
+Installation:
+-
+
+- Copy configuration file and edit values: `cp config.py.dist config.py && nano config.py` 
+- Execute: `python3 coordinosaur.py`
+
+Configuration:
 -
 - `MAX_CONCURRENT_JOBS`: `int` = How many job in parallel can be executed
 - `TIMEOUT_OFFSET`: `int` = Add timeout offset value to registration timeout value
