@@ -1,0 +1,21 @@
+parameters = {
+    "MQTT_TOPIC_PREFIX": "coordinosaur",
+    "MQTT_CLIENT_NAME": "coordinosaur",
+    "MQTT_HOST": "127.0.0.1",
+    "MQTT_PORT": 1883,
+    "MQTT_USERNAME": "",
+    "MQTT_PASSWORD": "",
+    "DEFAULT_TIMEOUT_OFFSET": 0,
+    "DEFAULT_MAX_CONCURRENT_JOBS": 1,
+    "DEFAULT_QUOTAS_PER_INTERVAL": {},
+    "CHANNEL_OPTIONS": {
+        "test(.+)": {
+            "TIMEOUT_OFFSET": 1,
+            "MAX_CONCURRENT_JOBS": 2,
+            "QUOTAS_PER_INTERVAL": {
+                60: {"name": "minute", "limit": 15, "log": "v"},
+                3600: {"name": "hour", "limit": 100, "log": "q"},
+            }
+        }
+    }
+}

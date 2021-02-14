@@ -1,0 +1,13 @@
+[Unit]
+Description=Coordinosaur
+Wants=network-online.target
+After=network.target
+
+[Service]
+WorkingDirectory=/jet/app/coordinosaur
+ExecStart=/usr/bin/python3 ./main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
