@@ -5,7 +5,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/jet/app/coordinosaur
-ExecStart=/usr/bin/python3 ./main.py
+ExecStart=/usr/bin/python3 ./coordinosaur.py
 Restart=always
 RestartSec=5
 
