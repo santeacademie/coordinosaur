@@ -16,18 +16,20 @@ Rules:
 - `MAX_CONCURRENT_JOBS`: `int` = How many job in parallel can be executed
 - `TIMEOUT_OFFSET`: `int` = Add timeout offset value to registration timeout value
 - `QUOTAS_PER_INTERVAL`: `json` 
-```json
-{
+```js
+var exemple = {
   60:   {"name": "minute", "limit": 15, "log": "v"},  // Only 15 requests per minute (log quotas is verbose)
   3600: {"name": "hour", "limit": 100, "log": "q"}    // Only 100 requests per hour (log quotas is quiet) 
 }
 ```
 - `CHANNEL_OPTIONS`: `json` = Custom rules per channel (using regex)
-```json
-"test(.+)": {
-    "TIMEOUT_OFFSET": 1,
-    "MAX_CONCURRENT_JOBS": 2,
-    "QUOTAS_PER_INTERVAL": {}
+```js
+var exemple = {
+  "test(.+)": {
+      "TIMEOUT_OFFSET": 1,
+      "MAX_CONCURRENT_JOBS": 2,
+      "QUOTAS_PER_INTERVAL": {}
+  }
 }
 ``` 
 
@@ -37,8 +39,8 @@ Client API:
 >Registration (Publish):
 - **Topic** = `/coordinosaur/{channel}/register`
 - **Payload** : `json`
-```json
-{
+```js
+var exemple = {
   "uid": "string (client muse choose a job uid)",
   "timeout": "int"
 }
