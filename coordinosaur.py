@@ -1,5 +1,6 @@
 import signal
 import sys
+from pathlib import Path
 
 from core.LogManager import LogManager
 from core.BagManager import BagManager
@@ -8,6 +9,7 @@ from core.QuotasManager import QuotasManager
 from core.ChannelManager import ChannelManager
 from core.MqttManager import MqttManager
 from core.Container import Container
+from core.Utils import rootDir
 
 container = Container()
 
@@ -37,7 +39,7 @@ def exitHandler(signalNumber = None, stackFrame = None):
 signal.signal(signal.SIGTERM, exitHandler)
 
 def banner():
-    dinofile = open('asset/dino.txt', mode='r')
+    dinofile = open(str(Path(rootDir(), 'asset/dino.txt')), mode='r')
     logManager.info(dinofile.read())
     dinofile.close()
     logManager.info('Starting...\n')
