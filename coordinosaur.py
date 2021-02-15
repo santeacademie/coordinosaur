@@ -36,8 +36,16 @@ def exitHandler(signalNumber = None, stackFrame = None):
 
 signal.signal(signal.SIGTERM, exitHandler)
 
+def banner():
+    dinofile = open('asset/dino.txt', mode='r')
+    logManager.info(dinofile.read())
+    dinofile.close()
+    logManager.info('Starting...\n')
+
 try:
-    logManager.info('Starting coordinosaur...')
+    banner()
     mqttManager.start()
 except KeyboardInterrupt:
     exitHandler()
+
+
