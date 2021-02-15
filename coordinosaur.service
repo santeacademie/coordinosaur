@@ -1,5 +1,5 @@
 [Unit]
-Description=Coordinosaur
+Description=coordinosaur
 Wants=network-online.target
 After=network.target
 
