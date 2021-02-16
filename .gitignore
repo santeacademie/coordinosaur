@@ -2,3 +2,5 @@
 *.pyc
 config.py
 *.log
+var/log/*
+!var/log/.gitkeep
