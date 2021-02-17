@@ -1,7 +1,7 @@
 COORDINOSAUR
 ============
 
-*Semaphore-like feature over MQTT*
+*Semaphore-like feature over MQTT and more*
 
 ![Coordinosaur](./asset/coordinosaur.png)
 
