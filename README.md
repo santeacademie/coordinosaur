@@ -1,6 +1,8 @@
 COORDINOSAUR
 ============
 
+*Semaphore-like feature over MQTT*
+
 ![Coordinosaur](./asset/coordinosaur.png)
 
 Coordinosaur is a simple task coordinator able to:
